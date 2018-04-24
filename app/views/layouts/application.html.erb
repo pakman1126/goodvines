@@ -2,20 +2,39 @@
 <html>
   <head>
     <title>Goodvines</title>
-    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows+Into+Light">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", simple_pages_about_path %></li>
-        <li><%= link_to "Contact", simple_pages_contact_path %></li>
-      </ul>
-    </nav>
+    <!--navbar starts here-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <nav class="container-fluid">
+        <nav class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <nav class="site-name navbar-brand">
+            <%= link_to "GoodVines", root_path %>
+          </nav> <!-- end GoodVines -->
+        </nav> <!-- end navbar-header -->
+        <nav class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About", simple_pages_about_path %></li>
+            <li><%= link_to "Contact", simple_pages_contact_path %></li>
+          </ul>
+        </nav> <!-- end navbar-collapse -->
+      </nav> <!-- end nav container-fluid -->
+    </nav> <!-- end navbar -->
 
     <%= yield %>
 
