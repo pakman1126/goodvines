@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   get 'simple_pages/contact'
 
   get 'simple_pages/index'
+
   root 'simple_pages#index'
+
+  post 'simple_pages/thank_you'
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
