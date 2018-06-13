@@ -26,6 +26,14 @@
             <%= link_to "GoodVines", root_path %>
           </nav> <!-- end GoodVines -->
         </nav> <!-- end navbar-header -->
+        <nav class="nav navbar-nav">
+          <!-- Search Field -->
+          <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+            <%= form.label :q, 'Search for:' %>
+            <%= form.text_field :q, id: 'q', value: params[:q] %>
+            <%= form.submit 'Search' %>
+          <% end %> <!-- end Search Field -->
+        </nav>
         <nav class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home", root_path %></li>
