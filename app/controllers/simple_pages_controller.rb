@@ -10,5 +10,5 @@ class SimplePagesController < ApplicationController
         to: 'pakman1126@yahoo.com',
         subject: "A new contact form message from #{@name}",
         body: @message).deliver_now
-    end
+  end
 end
