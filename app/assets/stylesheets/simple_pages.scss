@@ -1,7 +1,7 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h1, h2 {
+h1 {
   font-family: 'Shadows Into Light', cursive;
   color: #777777;
   text-align: center;
@@ -20,6 +20,7 @@ h1, h2 {
 
 .nav {
   text-transform: uppercase;
+  color: gray;
 }
 
 .anchor {
